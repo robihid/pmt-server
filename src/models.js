@@ -29,8 +29,8 @@ module.exports.User = buildModel('User', {
     type: String,
     default: ''
   },
-  firstname: String,
-  lastname: String,
+  firstName: String,
+  lastName: String,
   email: {
     type: String,
     required: true

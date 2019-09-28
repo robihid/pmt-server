@@ -4,7 +4,7 @@ const { User } = require('./models');
 const resolvers = {
   Query: {
     test(_, args, context) {
-      return 'Hello World!!';
+      return 'Hello There';
     }
   },
   Mutation: {
@@ -26,8 +26,8 @@ const resolvers = {
   Date: new GraphQLScalarType({
     name: 'Date',
     description: 'Date custom scalar type',
-    parseValue: value => moment(value).toDate(), // value from the client
-    serialize: value => value.getTime(), // value sent to the client
+    parseValue: value => moment(value).toDate(),
+    serialize: value => value.getTime(),
     parseLiteral: ast => ast
   })
 };
